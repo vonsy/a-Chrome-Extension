@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "a Chrome Extension",
+  "version": "1.0",
+  "description": "Building a Chrome Extension",
+  "icons": { "128": "icon_128.png" },
+  "permissions": [
+    "storage",
+    "alarms",
+    "cookies",
+    "*://fengsongyan.com/*"
+  ],
+  "content_scripts": [{
+    "js": ["jquery-3.1.1.min.js","content.js","contentscript.js"],
+    "matches": ["*://fengsongyan.com/*"]
+  }],
+  "web_accessible_resources": [
+    "jquery-3.1.1.min.js",
+    "injected.js"
+  ]  
+}
